@@ -51,8 +51,69 @@
     font-weight: bold;
 	list-style-position: inside;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[list],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #4ecdc4;
+    border-radius: 5px;
+    background-color: #162447;
+    color: #e6e6e6;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[list]:focus,
+select:focus {
+    border-color: #f6b93b;
+    background-color: #1f4068;
+    outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[list]:hover,
+select:hover {
+    border-color: #3fb0ac;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #e6e6e6;
+    background-color: #4ecdc4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3fb0ac;
+}
+
+button:active {
+    background-color: #2c786c;
+    transform: scale(0.98);
+}
+
 </style>
 </head>
+
+
+
+
 
 
 <body>
@@ -92,6 +153,45 @@
 <li>Ludnica s tenorima</li>
 <li>Ljepotica i zvijer</li>
 </ol>
+
+<section id="prijava">
+  <h2>Prijava na Newsletter</h2>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Prijava</legend>
+
+      <label for="ime">Ime i prezime:</label>
+      <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime">
+<br>
+      <label for="email">Email adresa:</label>
+      <input type="email" id="email" name="email" placeholder="Unesite svoj email">
+<br>
+      <label for="kontakt">Poveznica za alternativni kontakt:</label>
+      <input type="url" id="kontakt" name="kontakt" placeholder="Kontakt">
+<br>
+      <label for="obavijesti">Odaberite obavijesti:</label>
+      <select id="obavijesti" name="obavijesti">
+        <option value=""> Odaberite </option>
+        <option value="Želim primati sve vrste obavijesti">Želim primati sve vrste obavijesti</option>
+        <option value="Želim primati obavijesti samo o novim predstavama">Želim primati obavijesti samo o novim predstavama</option>
+      </select>
+<br>
+      <label for="predstava">U kazalištu žeim vidjeti predstavu:</label>
+      <input list="predstave" id="predstava" name="predstava" placeholder="Odaberite ili upišite predstavu">
+      <datalist id="predstave">
+        <option value="Jalta jalta">
+        <option value="Kaj je ljubav">
+        <option value="Ljepotica i zvijer">
+        <option value="Ludnica s tenorima">
+      </datalist>
+<br>
+      <button type="submit" id="predaj">Predaj prijavu</button>
+    </fieldset>
+  </form>
+</section>
+
+
 
 </body>
 
